@@ -1,0 +1,16 @@
+---
+vars :
+        path: "https://download.docker.com/linux/ubuntu/gpg"
+        url: "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+tasks:
+        
+- name: "Add official GPG key"
+  apt_key:
+    url: {path}
+    state: present
+- name: "Add repository"
+  apt_repository:
+    repo: { url }
+    state: present
+    filename: docker
+
