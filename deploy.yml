@@ -1,0 +1,7 @@
+---
+- hosts: 192.168.56.103
+  remote_user: jitu
+  become: yes
+  roles:
+    - repository-setup
+    - Docker
