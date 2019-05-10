@@ -3,14 +3,12 @@ pipeline {
 
     stages {
         stage('Build') {
-            steps{
-            step {
+            
+            steps {
                 echo 'Building..'
+                sh 'ls -l'
             }
-            step {
-                echo 'Building222..'
-            }
-            }
+
         }
         stage('Test') {
             steps {
