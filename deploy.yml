@@ -5,3 +5,4 @@
   roles:
     - repository-setup
     - Docker
+    - apache
